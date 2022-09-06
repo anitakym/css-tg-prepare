@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .backdrop {
+      background: center / cover no-repeat url("https://images.unsplash.com/photo-1531685250784-7569952593d2?w=500&q=60");
+      width: 400px;
+      height: 240px;
+      overflow: hidden;
+      border-radius: 20px;
+      filter: brightness(1.3);
+    }
+
+    .shapes {
+      color: transparent;
+      background-color: rgba(0, 0, 0, 0.3);
+      text-shadow: 0 0 40px white;
+      mix-blend-mode: multiply;
+      font: bolder 320pt/320pt monospace;
+      margin-top: -100px;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+    }
+
+    .backdrop>* {
+      grid-area: 1/1;
+    }
+
+    body,
+    .backdrop {
+      display: grid;
+    }
+
+    body {
+      margin: 0;
+      align-items: center;
+      justify-items: center;
+      height: 100vh;
+    }
+
+    /* for chrome */
+    @supports (-webkit-app-region:none) {
+      .shapes {
+        text-shadow: 0 0 14px white;
+      }
+    }
+
+    /* this is a demo code only */
+  </style>
+</head>
+
+<body>
+  <div class="backdrop">
+    <p class="shapes">🍃</p>
+    <p class="shapes">🍂</p>
+    <p class="shapes">\</p>
+  </div>
+
+</body>
+
+</html>
